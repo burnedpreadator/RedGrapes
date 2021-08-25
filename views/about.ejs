@@ -1,0 +1,56 @@
+<%- include('./partials/header.ejs') %>
+  <div class="nav-background">
+    <video autoplay muted loop id="myVideo">
+      <source src="/bgvideo" type="video/mp4">
+    </video>
+    <p class="heading">WE ARE ALL ABOUT<br>
+      CREATIVITY AND HARD WORK</p>
+    <p></p>
+  </div>
+  <div id="aboutsection" class="about-section">
+    <div class="about-section-one">
+      <p>WHAT WE ARE ABOUT ?</p>
+    </div>
+    <div class="about-section-two">
+      <p class="h2">We give brands direction</p>
+      <p style="line-height: 2; font-family: 'Merriweather', serif;">Our team though small ,excel in experience.
+        We care just as much about the performance of a project as we do the aesthetics.
+        Our strategic approach is what makes us different and great to work with.
+        Everything we do, starts with strategy.Our reasearch is well- documented and our ideas are shared in an
+        organised
+        way.
+        Instead of focusing on what's hot or new , we take a timeless approach to visuals.We know the importance of your
+        time, which motivates us to be punctual.
+        When it comes to web development the user gets priority. We work through goals,needs and ideas to ensure our
+        digital product get remarkable results.
+        we gather, organise and build plans based on each project's needs.
+        We believe that building a brand is really building a relationship.We get to know you and your organisation so
+        we
+        can feel we are a part of it. Then we go off.
+        our brand centric approach to websites ensures you look great and tell a compelling story. </p>
+      <p style="line-height: 2; font-family: 'Merriweather', serif;">
+        The best products and brands are a result of powerful moments of connection. We invest in finding these,
+        regardless of budget. We love good ideas and we have a lot of them.</p>
+      <div class="capability-image">
+        <img src="../img/capabilities.jpg" alt="">
+        <P class="img-text">MAKING YOUR BRAND ONE OF<br>INDIA'S FASTEST GROWING<br>BUSINESS</P>
+      </div>
+    </div>
+  </div>
+  <div class="more-about-us">
+    <div class="video-info">
+      <p>KNOW MORE ABOUT OUR<br> JOURNEY</p>
+    </div>
+    <div class="video-section">
+      <video class="video-js vjs-big-play-centered" id='videoPlayer' width='840' height='490'>
+        <source src="/video" type='video/mp4' />
+      </video>
+    </div>
+  </div>
+
+
+  <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+  <script src="https://cdn.sc.gl/videojs-hotkeys/0.2/videojs.hotkeys.min.js"></script>
+  <script type="text/JavaScript" src="./js/video-player.js"></script>
+
+  <%- include('./partials/footer.ejs') %>
