@@ -1,12 +1,15 @@
 scrolltotop = document.getElementById("scroll-top-button");
 
-  window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {scrollFunction()};
 
-  function scrollFunction() {
-  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+
+function scrollFunction() {
+  if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
     scrolltotop.style.display = "block";
   } else {
     scrolltotop.style.display = "none";
   }
 }
+
+
 

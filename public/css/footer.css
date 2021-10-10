@@ -79,6 +79,7 @@ footer {
   footer p {
     font-size: 76px;
     font-family: "Bebas Neue", cursive;
+    padding: 5px;
   }
   footer ul {
     display: flex;

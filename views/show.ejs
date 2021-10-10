@@ -1,0 +1,15 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/flash.ejs') %>
+
+        <div class="grids no-gutter">
+            <% if( Array.isArray(work) ) { %>
+                <%work.forEach( function( work ){ %>
+                    <div class="grid">
+                        <img class="img-fluid" src="<%= work.workImage %>" alt="">
+                    </div>
+            <% })} else { %>
+                    <% console.log('error') %>
+            <% }; %>
+        </div>
+
+<%- include('./partials/footer.ejs') %>

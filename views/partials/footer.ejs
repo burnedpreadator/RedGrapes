@@ -1,4 +1,3 @@
-
     <footer class="footer">
         <div class="container">
             <div class="quote">
@@ -25,10 +24,68 @@
         </div>
     </footer>
 
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#slider-inner").owlCarousel({
+                items:6,
+                infinite: true,
+                itemsDesktop:[1000,6],
+                itemsDesktopSmall:[979,4],
+                itemsTablet:[768,3],
+                itemsMobile:[650,1],
+                pagination:false,
+                autoPlay: 2500
+            });
+        });
+
+        $(document).ready(function(){
+            $("#graphic-design-slider").owlCarousel({
+                items:6,
+                infinite: true,
+                itemsDesktop:[1000,6],
+                itemsDesktopSmall:[979,4],
+                itemsTablet:[768,3],
+                itemsMobile:[650,1],
+                pagination:false,
+                autoPlay: 2500
+            });
+        });
+      </script>
+
+    <script>
+        const body = document.body;
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset
+
+            if(currentScroll <= 0){
+                body.classList.remove("scroll-up")
+            }
+
+            if(currentScroll > lastScroll && !body.classList.contains("scroll-down")){
+                body.classList.remove("scroll-up")
+                body.classList.add("scroll-down")
+            }
+            
+            if(currentScroll < lastScroll && body.classList.contains("scroll-down")){
+                body.classList.remove("scroll-down")
+                body.classList.add("scroll-up")
+            }
+
+            lastScroll = currentScroll;
+        })
+
+    </script>
     
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type='text/JavaScript' src='./js/Home.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	</script>
+    </script>
 </body>
 </html>
 
