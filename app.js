@@ -258,7 +258,7 @@ app.use((req,res,next) => {
 //   next(error);
 // })
 
-
-app.listen(3000, (error) => {
+const port = process.env.PORT || 3000;
+app.listen(port, (error) => {
     console.log("app started");
 })
