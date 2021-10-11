@@ -16,10 +16,10 @@ const bcrypt = require('bcrypt');
 const User = require('./models/user')
 
 require("./db/conn");
-const { connect } = require('http2');
+// const { connect } = require('http2');
 const showRoutes = require('./routes/show');
 const mailRoutes = require('./routes/mailRoute');
-const { getMaxListeners } = require('process');
+// const { getMaxListeners } = require('process');
 
 app.use('ejs', ejsMate)
 app.use(express.urlencoded({ extended: true }));
@@ -111,7 +111,7 @@ app.get('/logout', function (req, res) {
 
 
 app.get('/setup', async (req, res) => {
-	const exists = await User.exists({ username: "redgrapes" });
+	const exists = await User.exists({ username: ADMIN_USERNAME });
 
 	if (exists) {
 		res.redirect('/login');
@@ -120,11 +120,11 @@ app.get('/setup', async (req, res) => {
 
 	bcrypt.genSalt(8, function (err, salt) {
 		if (err) return next(err);
-		bcrypt.hash("redgrape1@S", salt, function (err, hash) {
+		bcrypt.hash(ADMIN_KEY, salt, function (err, hash) {
 			if (err) return next(err);
 			
 			const newAdmin = new User({
-				username: "redgrapes",
+				username: ADMIN_USERNAME,
 				password: hash
 			});
 
