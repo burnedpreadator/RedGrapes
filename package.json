@@ -17,8 +17,11 @@
     "nodemon": "^2.0.7"
   },
   "dependencies": {
+    "@heroku/buildpack-registry": "^1.0.1",
+    "async-file": "^2.0.2",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
+    "cli-ux": "^4.9.3",
     "cloudinary": "^1.27.0",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^4.6.0",
@@ -28,6 +31,7 @@
     "ejs-mate": "^3.0.0",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
+    "got": "^9.6.0",
     "gridfs-stream": "^1.1.1",
     "heroku": "^7.59.0",
     "method-override": "^3.0.0",
@@ -39,6 +43,7 @@
     "nodemailer": "^6.6.3",
     "passport": "^0.5.0",
     "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^6.1.0"
+    "passport-local-mongoose": "^6.1.0",
+    "phoenix": "^1.6.2"
   }
 }
