@@ -1,20 +1,25 @@
 <%- include('./partials/header.ejs') %>
 
-<div class='first-section'>
-        <div class="allert"><%- include('./partials/flash.ejs') %></div>
+    <div class='first-section'>
+        <div class="allert">
+            <%- include('./partials/flash.ejs') %>
+        </div>
         <video autoplay muted loop id="myVideo">
             <source src="/bgvideo" type="video/mp4">
         </video>
-        <p class="slogan"><span class="Lets-work-together">Lets work together</span><br>to create the next <br><span class="big-thing">BIG THING</span></p>
+        <p class="slogan"><span class="Lets-work-together">Lets work together</span><br>to create the next <br><span
+                class="big-thing">BIG THING</span></p>
         <div class="vr"></div>
-        <p><span>Red grapes</span> is a multimedia marketing and advertising company, which helps brands to excel in right direction. </p>
+        <p><span>Red grapes</span> is a multimedia marketing and advertising company, which helps brands to excel in
+            right direction. </p>
         <div class="WorkWithUs">
             <li class="Need-Website"><a href="/Contact">Work With Us</a></li>
         </div>
     </div>
     <div class="container">
         <div class="services">
-            <p class="services-title">WHAT WE OFFER</p><hr>
+            <p class="services-title">WHAT WE OFFER</p>
+            <hr>
         </div>
         <div class="second-column">
             <a href="/work#social-media-marketing" class="columns">
@@ -54,7 +59,7 @@
                 <div class="Text">
                     <h4 style="padding: 5px;">WEB DEVELOPMENT</h4>
                     <P>In publishing and graphic design, Lorem ipsum is a placeholder
-                    text commonly used to demonstrate the</P>
+                        text commonly used to demonstrate the</P>
                 </div>
             </a>
             <a href="/work#video-production" class="columns">
@@ -62,27 +67,31 @@
                 <div class="Text">
                     <h4 style="padding: 5px;">VIDEO PRODUCTION</h4>
                     <P>In publishing and graphic design, Lorem ipsum is a placeholder
-                    text commonly used to demonstrate the</P>
+                        text commonly used to demonstrate the</P>
                 </div>
             </a>
         </div>
-        <section class="columns destination" id="destination">
+        <div class="columns destination" id="destination" >
             <div class="capabilities">
                 <p class="title our">OUR CAPABILITIES SO<br> FAR</p>
             </div>
             <div class="destination-section-text">
-                <p>Capabilities are not something that can be measured individually, capabilities—the collective skills, abilities, and expertise of an organization—are the outcome of investments in staffing, training, compensation, communication, and other human resources areas. </p>
+                <p>Capabilities are not something that can be measured individually, capabilities—the collective skills,
+                    abilities, and expertise of an organization—are the outcome of investments in staffing, training,
+                    compensation, communication, and other human resources areas. </p>
                 <div class="read-more"> > &nbsp <a href=""> read more</a></div>
                 <div class="capability-image">
                     <img src="../img/capabilities.jpg" alt="">
                     <P class="img-text">MAKING YOUR BRAND ONE OF<br>INDIA'S FASTEST GROWING<br>BUSINESS</P>
                 </div>
             </div>
-        </section>
+        </div>
+
         <div class="destination-2 " id="destination-2" data-0="transform:translateX(0%);"
             data-1000="transform:translateX(-100%);">
             <div class="Grid-title">
-                <p class="title">WHAT WE HAVE BEEN UPTO<br> SOO SO FAR</p><hr>
+                <p class="title">WHAT WE HAVE BEEN UPTO<br> SOO SO FAR</p>
+                <hr>
             </div>
         </div>
         <div class="grids no-gutter">
@@ -91,18 +100,20 @@
                 <div class="grid">
                     <img class="img-fluid" src="<%= work[i].workImage %>" alt="">
                 </div>
-            <% } %>
-            
-        </div> 
-        <div class="destination-2 " id="destination-2" data-0="transform:translateX(0%);" data-1000="transform:translateX(-100%);">
+                <% } %>
+
+        </div>
+        <div class="destination-2 " id="destination-2" data-0="transform:translateX(0%);"
+            data-1000="transform:translateX(-100%);">
             <a href="/show" style="text-decoration: none;">
                 <div class="more"><i class="fa fa-chevron-down"></i></div>
             </a>
         </div>
-                    
-    
+
+
         <div class="teams">
-            <div id="our-team-intro">Our Team</div><hr>
+            <div id="our-team-intro">Our Team</div>
+            <hr>
             <div class="our-team" id="our-team">
                 <div class="column">
                     <div id="img-container">
@@ -111,7 +122,8 @@
                     <div class="info">
                         <h4 style="color: #981854">Raj Roshan Prajapati</h4>
                         <p class="title">CCO</p>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been
                             the
                             industry's standard dummy text</p>
                         <p>mike@example.com</p>

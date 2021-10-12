@@ -19,13 +19,13 @@ router.post('/', (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'chhariavikram1@gmail.com',
-            pass: 'vikra1@M$'
+            user: process.env.EMAIL,
+            pass: process.env.EMAIL_PW
         }
 })
 const mailOptions = {
     form: req.body.email,
-    to: 'chhariavikram1@gmail.com',
+    to: process.env.EMAIL,
     subject: `message from ${req.body.company}: ${req.body.email}`,
     html: `<h2>from: ${req.body.company}</h2></br>
             <h2>${req.body.projectdesc}</h2></br>

@@ -2,7 +2,7 @@
   "name": "red-grapes",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "engines": {
     "node": "14.16.1",
     "npm": "7.11.0"
