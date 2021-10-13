@@ -1,10 +1,8 @@
 if(process.env.NODE_ENV !=="production") {
   require('dotenv').config();
 }
-
 const express = require('express');
-const app =  express();     
-const mongoose = require('mongoose');                    
+const app =  express();                     
 const fs = require("fs");
 const methodOverride = require("method-override");
 const session = require('express-session')
@@ -16,10 +14,8 @@ const bcrypt = require('bcrypt');
 const User = require('./models/user')
 
 require("./db/conn");
-const { connect } = require('http2');
 const showRoutes = require('./routes/show');
 const mailRoutes = require('./routes/mailRoute');
-const { getMaxListeners } = require('process');
 
 app.use('ejs', ejsMate)
 app.use(express.urlencoded({ extended: true }));
