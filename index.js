@@ -1,140 +1,43 @@
 if(process.env.NODE_ENV !=="production") {
   require('dotenv').config();
 }
-const express = require('express');
-const app =  express();                     
-const fs = require("fs");
-const methodOverride = require("method-override");
-const session = require('express-session')
-const flash = require('connect-flash')
-const ejsMate = require('ejs-mate')
-const passport = require('passport')
-const localStrategy = require('passport-local').Strategy;
-const bcrypt = require('bcrypt');
-const User = require('./models/user')
+const express = require('express'),
+      app =  express(),         
+      fs = require("fs"),
+      methodOverride = require("method-override"),
+      session = require('express-session'),
+      flash = require('connect-flash'),
+      ejsMate = require('ejs-mate'),
+      showRoutes = require('./routes/show'),
+      mailRoutes = require('./routes/mailRoute'),
+      loginRoutes = require('./routes/loginRoute'),
+      adminRoutes = require('./routes/adminRoute')
+      logoutRoutes = require('./routes/logoutRoute')
+      sessionConfig = require('./models/sessionConfig');
 
 require("./db/conn");
-const showRoutes = require('./routes/show');
-const mailRoutes = require('./routes/mailRoute');
 
 app.use('ejs', ejsMate)
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(express.urlencoded({ extended: true, limit: '50mb' }));
+app.use(express.json({limit: '50mb'}));
 app.use(methodOverride('_method'));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
 
-const sessionConfig = { 
-  secret: 'thisshouldbeabettersecret!', 
-  resave: false, 
-  saveUninitialized: true,
-  cookie: {
-    httpOnly: true,
-    expires: Date.now() + 1000 * 60 *60 *24 * 7,
-    maxAge: 1000 * 60 *60 *24 * 7
-  }
-}
-
 app.use(session(sessionConfig));
 app.use(flash());
-
-app.use(passport.initialize());
-app.use(passport.session());
-
 app.use((req,res, next) => {
   res.locals.success = req.flash('success');
   res.locals.error = req.flash('error');
   next();
 })
 
-passport.serializeUser(function (user, done) {
-	done(null, user.id);
-});
-
-passport.deserializeUser(function (id, done) {
-	User.findById(id, function (err, user) {
-		done(err, user);
-	});
-});
-
-passport.use(new localStrategy(function (username, password, done) {
-	User.findOne({ username: username }, function (err, user) {
-		if (err) return done(err);
-		if (!user) return done(null, false, { message: 'Incorrect username.' });
-
-		bcrypt.compare(password, user.password, function (err, res) {
-			if (err) return done(err);
-			if (res === false) return done(null, false, { message: 'Incorrect password.' });
-			
-			return done(null, user);
-		});
-	});
-}));
-
-
-
-function isLoggedIn(req, res, next) {
-	if (req.isAuthenticated()) return next();
-	res.redirect('/login');
-}
-function isLoggedOut(req, res, next) {
-	if (!req.isAuthenticated()) return next();
-  req.flash('error', 'need to log out first');
-	res.redirect('/admin');
-}
-
-
-app.get('/login',isLoggedOut, (req, res) => {
-	const response = {
-		title: "Login",
-		error: req.query.error
-	}
-
-	res.render('login', response);
-});
-app.post('/login', passport.authenticate('local', {
-  failureRedirect: '/login?error=true'
-}), (req, res) => {
-    req.flash('success', 'Successfully logged in');
-    res.redirect('/admin');
-});
-
-app.get('/logout', function (req, res) {
-	req.logout();
-  req.flash('success', 'Sucessfully logged out');
-	res.redirect('/');
-});
-
-
-app.get('/setup', async (req, res) => {
-	const exists = await User.exists({ username: ADMIN_USERNAME });
-
-	if (exists) {
-		res.redirect('/login');
-		return;
-	};
-
-	bcrypt.genSalt(8, function (err, salt) {
-		if (err) return next(err);
-		bcrypt.hash(ADMIN_KEY, salt, function (err, hash) {
-			if (err) return next(err);
-			
-			const newAdmin = new User({
-				username: ADMIN_USERNAME,
-				password: hash
-			});
-
-			newAdmin.save();
-
-			res.redirect('/login');
-		});
-	});
-});
-
-
 //routes
 app.use('/', mailRoutes);
 app.use('/show', showRoutes);
+app.use('/admin', adminRoutes);
+app.use('/login', loginRoutes);
+app.use('/logout', logoutRoutes);
 
 //other routes
 
@@ -148,10 +51,6 @@ app.get("/Contact", (req, res)=> {
 app.get("/Work", (req, res)=> {
   res.render('Work');
 })
-app.get("/admin", isLoggedIn, (req, res) => {
-  res.render('Admin', { title: "Admin" });
-})
-
 
 //video routes
 //video routes
