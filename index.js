@@ -4,7 +4,7 @@ if(process.env.NODE_ENV !=="production") {
 
 const express = require('express');
 const app =  express();     
-// const mongoose = require('mongoose');                    
+const mongoose = require('mongoose');                    
 const fs = require("fs");
 const methodOverride = require("method-override");
 const session = require('express-session')
@@ -16,10 +16,10 @@ const bcrypt = require('bcrypt');
 const User = require('./models/user')
 
 require("./db/conn");
-// const { connect } = require('http2');
+const { connect } = require('http2');
 const showRoutes = require('./routes/show');
 const mailRoutes = require('./routes/mailRoute');
-// const { getMaxListeners } = require('process');
+const { getMaxListeners } = require('process');
 
 app.use('ejs', ejsMate)
 app.use(express.urlencoded({ extended: true }));
@@ -243,20 +243,6 @@ app.use((req,res,next) => {
   }
   next();
 })
-
-// app.use((error, req, res, next) => {
-//   res.status(error.status || 500);
-//   res.json({
-//     error: {
-//       message: error.message
-//     }
-//   })
-// })
-// app.use((req, res, next) => {
-//   const error = new Error('Not found');
-//   error.status = 404;
-//   next(error);
-// })
 
 const port = process.env.PORT || 3000;
 app.listen(port, (error) => {
