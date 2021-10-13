@@ -16,9 +16,6 @@ const User = require('./models/user')
 require("./db/conn");
 const showRoutes = require('./routes/show');
 const mailRoutes = require('./routes/mailRoute');
-const compression = require('compression');
-
-app.use(compression());
 
 app.use('ejs', ejsMate)
 app.use(express.urlencoded({ extended: true }));
