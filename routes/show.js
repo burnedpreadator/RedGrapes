@@ -4,12 +4,12 @@ const mongoose = require('mongoose');
 const multer = require("multer");
 const Work = require('../models/show');
 const {storage} = require('../cloudinary')
-const {cloudinary} = require('../cloudinary')
-// const session = require('express-session')
-// const flash = require('connect-flash')
+const session = require('express-session')
+const flash = require('connect-flash')
+const sessionConfig = require('../models/sessionConfig');
 
-// router.use(session(sessionOptions));
-// router.use(flash());
+router.use(session(sessionConfig));
+router.use(flash());
 
 const fileFilter = (req, file, cb) => {
     //reject a file

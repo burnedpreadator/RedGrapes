@@ -3,21 +3,20 @@ if(process.env.NODE_ENV !=="production") {
 }
 const express = require('express'),
       app =  express(),         
-      fs = require("fs"),
       methodOverride = require("method-override"),
       session = require('express-session'),
       flash = require('connect-flash'),
-      ejsMate = require('ejs-mate'),
       showRoutes = require('./routes/show'),
       mailRoutes = require('./routes/mailRoute'),
       loginRoutes = require('./routes/loginRoute'),
       adminRoutes = require('./routes/adminRoute')
       logoutRoutes = require('./routes/logoutRoute')
-      sessionConfig = require('./models/sessionConfig');
+      sessionConfig = require('./models/sessionConfig'),
+      bgvideoRoute = require('./routes/videos/bgVideo'),
+      videoRoute = require('./routes/videos/video');
 
 require("./db/conn");
 
-app.use('ejs', ejsMate)
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use(express.json({limit: '50mb'}));
 app.use(methodOverride('_method'));
@@ -38,6 +37,8 @@ app.use('/show', showRoutes);
 app.use('/admin', adminRoutes);
 app.use('/login', loginRoutes);
 app.use('/logout', logoutRoutes);
+app.use('/video', videoRoute);
+app.use('/bgvideo', bgvideoRoute);
 
 //other routes
 
@@ -51,81 +52,6 @@ app.get("/Contact", (req, res)=> {
 app.get("/Work", (req, res)=> {
   res.render('Work');
 })
-
-//video routes
-//video routes
-//video routes
-
-app.get("/video", function (req, res) {
-    // Ensure there is a range given for the video
-    const range = req.headers.range;
-    if (!range) {
-      res.status(400).send("Requires Range header");
-    }
-  
-    // get video stats (about 61MB)
-    const videoPath = "./public/videos/healthcare.mp4";
-    const videoSize = fs.statSync("./public/videos/healthcare.mp4").size;
-  
-    // Parse Range
-    // Example: "bytes=32324-"
-    const CHUNK_SIZE = 10 ** 6; // 1MB
-    const start = Number(range.replace(/\D/g, ""));
-    const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
-  
-    // Create headers
-    const contentLength = end - start + 1;
-    const headers = {
-      "Content-Range": `bytes ${start}-${end}/${videoSize}`,
-      "Accept-Ranges": "bytes",
-      "Content-Length": contentLength,
-      "Content-Type": "video/mp4",
-    };
-  
-    // HTTP Status 206 for Partial Content
-    res.writeHead(206, headers);
-  
-    // create video read stream for this particular chunk
-    const videoStream = fs.createReadStream(videoPath, { start, end });
-  
-    // Stream the video chunk to the client
-    videoStream.pipe(res);
-});
-app.get("/bgvideo", function (req, res) {
-    // Ensure there is a range given for the video
-    const range = req.headers.range;
-    if (!range) {
-      res.status(400).send("Requires Range header");
-    }
-  
-    // get video stats (about 61MB)
-    const videoPath = "./public/videos/background.mp4";
-    const videoSize = fs.statSync("./public/videos/background.mp4").size;
-  
-    // Parse Range
-    // Example: "bytes=32324-"
-    const CHUNK_SIZE = 10 ** 6; // 1MB
-    const start = Number(range.replace(/\D/g, ""));
-    const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
-  
-    // Create headers
-    const contentLength = end - start + 1;
-    const headers = {
-      "Content-Range": `bytes ${start}-${end}/${videoSize}`,
-      "Accept-Ranges": "bytes",
-      "Content-Length": contentLength,
-      "Content-Type": "video/mp4",
-    };
-  
-    // HTTP Status 206 for Partial Content
-    res.writeHead(206, headers);
-  
-    // create video read stream for this particular chunk
-    const videoStream = fs.createReadStream(videoPath, { start, end });
-  
-    // Stream the video chunk to the client
-    videoStream.pipe(res);
-});
 
 app.use((req,res,next) => {
   res.header('Access-Control-Allow-Origin', '*');
