@@ -1,12 +1,12 @@
-const express = require("express");
-const router = express.Router();
-const mongoose = require('mongoose');
-const multer = require("multer");
-const Work = require('../models/show');
-const {storage} = require('../cloudinary')
-const session = require('express-session')
-const flash = require('connect-flash')
-const sessionConfig = require('../models/sessionConfig');
+const express = require("express"),
+    router = express.Router(),
+    mongoose = require('mongoose'),
+    multer = require("multer"),
+    Work = require('../models/show'),
+    {storage} = require('../cloudinary'),
+    session = require('express-session'),
+    flash = require('connect-flash'),
+    sessionConfig = require('../models/sessionConfig');
 
 router.use(session(sessionConfig));
 router.use(flash());

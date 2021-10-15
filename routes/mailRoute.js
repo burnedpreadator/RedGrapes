@@ -1,8 +1,7 @@
-const express = require("express");
-const router = express.Router();
-const nodemailer = require('nodemailer');
-const mongoose = require('mongoose');
-const Work = require('../models/show');
+const express = require("express"),
+    router = express.Router(),
+    nodemailer = require('nodemailer'),
+    Work = require('../models/show')
 
 router.get('/', async(req, res, next) => {
     Work.find({}, function(err, allWork) {
