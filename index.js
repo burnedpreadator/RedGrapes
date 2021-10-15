@@ -6,6 +6,7 @@ const express = require('express'),
       methodOverride = require("method-override"),
       session = require('express-session'),
       flash = require('connect-flash'),
+      ejsMate = require('ejs-mate'),
       showRoutes = require('./routes/show'),
       mailRoutes = require('./routes/mailRoute'),
       loginRoutes = require('./routes/loginRoute'),
@@ -17,6 +18,7 @@ const express = require('express'),
 
 require("./db/conn");
 
+app.use('ejs', ejsMate)
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use(express.json({limit: '50mb'}));
 app.use(methodOverride('_method'));
@@ -53,17 +55,17 @@ app.get("/Work", (req, res)=> {
   res.render('Work');
 })
 
-app.use((req,res,next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 
-              'Origin, X-Requested-With, Content-Type, Accept, Authorization'
-  );
-  if(req.method === 'OPTIONS') {
-    res.header('Access-Control-Methods', 'PUT, POST, PATCH, DELETE, GET');
-    return res.sendStatus(200).json({});
-  }
-  next();
-})
+// app.use((req,res,next) => {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   res.header('Access-Control-Allow-Headers', 
+//               'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+//   );
+//   if(req.method === 'OPTIONS') {
+//     res.header('Access-Control-Methods', 'PUT, POST, PATCH, DELETE, GET');
+//     return res.sendStatus(200).json({});
+//   }
+//   next();
+// })
 
 const port = process.env.PORT || 3000;
 app.listen(port, (error) => {

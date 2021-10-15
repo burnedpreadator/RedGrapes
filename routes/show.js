@@ -10,6 +10,11 @@ const sessionConfig = require('../models/sessionConfig');
 
 router.use(session(sessionConfig));
 router.use(flash());
+router.use((req,res, next) => {
+    res.locals.success = req.flash('success');
+    res.locals.error = req.flash('error');
+    next();
+  })
 
 const fileFilter = (req, file, cb) => {
     //reject a file
