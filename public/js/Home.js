@@ -11,5 +11,14 @@ function scrollFunction() {
   }
 }
 
+var main = function () {
+  $('.dropdown').click(function() {
+
+    $(this).children('.dropdown-menu').toggle();
+  });
+};
+
+$(document).ready(main);
+
 
 

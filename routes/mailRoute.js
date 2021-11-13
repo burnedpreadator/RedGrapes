@@ -1,18 +1,10 @@
 const express = require("express"),
     router = express.Router(),
-    nodemailer = require('nodemailer'),
-    Work = require('../models/show')
+    nodemailer = require('nodemailer');
 
-router.get('/', async(req, res, next) => {
-    Work.find({}, function(err, allWork) {
-        if(err){
-            console.log(err);
-        }else{
-            res.sendFile(__dirname + 'Home');
-            res.render('Home', {work: allWork});
-        }
-    });
-});
+router.get("/", (req, res)=> {
+    res.render('Contact');
+})
 
 router.post('/', (req, res) => {
     const transporter = nodemailer.createTransport({

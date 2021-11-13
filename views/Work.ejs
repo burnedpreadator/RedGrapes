@@ -1,13 +1,11 @@
 <%- include('./partials/header.ejs') %>
 <%- include('./partials/flash.ejs') %>
-
-    <link rel="stylesheet" href="./css/work.css">
     <div class="second-nav">
         <ul>
             <li class="parent" href="#">
                 <a href="#web-dev">
                     <span class="icon"><i class="fa fa-desktop"></i></span>
-                    <span class="text">Web Development</p></span> 
+                    <span class="text">Web Development</span></span> 
                 </a>
             </li>
             <li class="parent" href="#">
@@ -42,19 +40,19 @@
             </li>
         </ul>
     </div>
-
-    
     <div class="nav-background">
         <video autoplay muted loop id="myVideo">
             <source src="/bgvideo" type="video/mp4">
         </video>
-        <p class="heading" style="color: #f5f5f5; padding-left: 100px;">WHAT WE'VE BEEN<br> UPTO
+        <p class="heading" >WHAT WE'VE BEEN<br> UPTO
             SO FAR ?</p>
         <p></p>
     </div>
 
+    
 
-    <div class="container">
+
+    <div class="services-container">
         <div class="work-services pt-5">
             <div class="services-info mb-5">
                 <h1 class="mb-2">Services</h1>
@@ -63,47 +61,114 @@
                 <p>redgrapes SmartServices are focused offerings to support you through each stage of your data journey - from pilot to production. From out of the box offerings to customized packages, SmartServices are designed for you to realize the value of your redgrapes investment quickly, painlessly, at a lower cost and with peak performance.</p>
             </div>
             <div class="red-services">
-                <div class="service-pngs">
-                    <li class="m-5"><img src="../img/services/app-development.png" alt="">
-                        <p class="pt-3 mb-3">App Development</p>
-                        <p class="desc">It is a long established fact that a reader will be distracted by the readable 
-                            content of a page when looking at its layout. 
-                        </p>
+                <div class="row service-pngs" id="service-pngs">
+                    <div class="col-sm-6 col-lg-6 col-xl-4">
+                        <li class="services-names"><img class="img-fluid" src="../img/services/app-development.png" alt="">
+                            <p class="pt-3 mb-3">App Development</p>
+                            <p class="desc">It is a long established fact that a reader will be distracted by the readable 
+                                content of a page when looking at its layout. 
+                            </p>
+                        </li>
+                    </div>
+                    <div class="col-sm-6 col-lg-6 col-xl-4">
+                        <li class="services-names"><img class="img-fluid" src="../img/services/bullhorn.png" alt="">
+                            <p class="pt-3 mb-3">Digital marketing/Advertising</p>
+                            <p class="desc">It is a long established fact that a reader will be distracted by the readable 
+                                content of a page when looking at its layout.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="col-sm-6 col-lg-6 col-xl-4">
+                        <li class="services-names"><img class="img-fluid" src="../img/services/share.png" alt="">
+                            <p class="pt-3 mb-3">Social media management</p>
+                            <p class="desc">It is a long established fact that a reader will be distracted by the readable 
+                                content of a page when looking at its layout. 
+                            </p>
+                        </li>
+                    </div>
+                </div>
+                <div class="row service-pngs owl-carousel owl-theme service-pngs-carousel-1">
+                    <div class="col-sm-6 col-lg-6 col-xl-4">
+                        <li class="services-names"><img class="img-fluid" src="../img/services/app-development.png" alt="">
+                            <p class="pt-3 mb-3">App Development</p>
+                            <p class="desc">It is a long established fact that a reader will be distracted by the readable 
+                                content of a page when looking at its layout. 
+                            </p>
+                        </li>
+                    </div>
+                    <div class="col-sm-6 col-lg-6 col-xl-4">
+                        <li class="services-names"><img class="img-fluid" src="../img/services/bullhorn.png" alt="">
+                            <p class="pt-3 mb-3">Digital marketing/Advertising</p>
+                            <p class="desc">It is a long established fact that a reader will be distracted by the readable 
+                                content of a page when looking at its layout.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="col-sm-6 col-lg-6 col-xl-4">
+                        <li class="services-names"><img class="img-fluid" src="../img/services/share.png" alt="">
+                            <p class="pt-3 mb-3">Social media management</p>
+                            <p class="desc">It is a long established fact that a reader will be distracted by the readable 
+                                content of a page when looking at its layout. 
+                            </p>
+                        </li>
+                    </div>
+                </div>
+                <div class="row service-pngs" id="service-pngs">
+                    <div class="col-sm-6 col-lg-6 col-xl-4">
+                        <li class="services-names">
+                            <img class="img-fluid" src="../img/services/video-production.png" alt="">
+                            <p class="pt-3 mb-3">Video Production</p>
+                            <p class="desc">It is a long established fact that a reader will be distracted by the readable 
+                                content of a page when looking at its layout. 
+                            </p>
+                    </div>
                     </li>
-                    <li class="m-5"><img src="../img/services/bullhorn.png" alt="">
-                        <p class="pt-3 mb-3">Digital marketing/Advertising</p>
-                        <p class="desc">It is a long established fact that a reader will be distracted by the readable 
-                            content of a page when looking at its layout.
-                        </p>
+                    <div class="col-sm-6 col-lg-6 col-xl-4">
+                        <li class="services-names">
+                            <img class="img-fluid" src="../img/services/web-design.png" alt="">
+                            <p class="pt-3 mb-3">Graphic Designing</p>
+                            <p class="desc">It is a long established fact that a reader will be distracted by the readable 
+                                content of a page when looking at its layout. 
+                            </p>
+                    </div>
                     </li>
-                    <li class="m-5"><img src="../img/services/share.png" alt="">
-                        <p class="pt-3 mb-3">Social media management</p>
-                        <p class="desc">It is a long established fact that a reader will be distracted by the readable 
-                            content of a page when looking at its layout. 
-                        </p>
+                    <div class="col-lg-6 col-xl-4">
+                        <li class="services-names">
+                            <img class="img-fluid" src="../img/services/website.png" alt="">
+                            <p class="pt-3 mb-3">Web Development</p>
+                            <p class="desc">It is a long established fact that a reader will be distracted by the readable 
+                                content of a page when looking at its layout. 
+                            </p>
+                    </div>
                     </li>
                 </div>
-                <div class="service-pngs">
-                    <li class="m-5">
-                        <img src="../img/services/video-production.png" alt="">
-                        <p class="pt-3 mb-3">Video Production</p>
-                        <p class="desc">It is a long established fact that a reader will be distracted by the readable 
-                            content of a page when looking at its layout. 
-                        </p>
+                <div class="row service-pngs owl-carousel owl-theme service-pngs-carousel-2">
+                    <div class="col-sm-6 col-lg-6 col-xl-4">
+                        <li class="services-names">
+                            <img class="img-fluid" src="../img/services/video-production.png" alt="">
+                            <p class="pt-3 mb-3">Video Production</p>
+                            <p class="desc">It is a long established fact that a reader will be distracted by the readable 
+                                content of a page when looking at its layout. 
+                            </p>
+                    </div>
                     </li>
-                    <li class="m-5">
-                        <img src="../img/services/web-design.png" alt="">
-                        <p class="pt-3 mb-3">Graphic Designing</p>
-                        <p class="desc">It is a long established fact that a reader will be distracted by the readable 
-                            content of a page when looking at its layout. 
-                        </p>
+                    <div class="col-sm-6 col-lg-6 col-xl-4">
+                        <li class="services-names">
+                            <img class="img-fluid" src="../img/services/web-design.png" alt="">
+                            <p class="pt-3 mb-3">Graphic Designing</p>
+                            <p class="desc">It is a long established fact that a reader will be distracted by the readable 
+                                content of a page when looking at its layout. 
+                            </p>
+                    </div>
                     </li>
-                    <li class="m-5">
-                        <img src="../img/services/website.png" alt="">
-                        <p class="pt-3 mb-3">Web Development</p>
-                        <p class="desc">It is a long established fact that a reader will be distracted by the readable 
-                            content of a page when looking at its layout. 
-                        </p>
+                    <div class="col-lg-6 col-xl-4">
+                        <li class="services-names">
+                            <img class="img-fluid" src="../img/services/website.png" alt="">
+                            <p class="pt-3 mb-3">Web Development</p>
+                            <p class="desc">It is a long established fact that a reader will be distracted by the readable 
+                                content of a page when looking at its layout. 
+                            </p>
+                    </div>
                     </li>
                 </div>
             </div>
@@ -127,16 +192,23 @@
     <!-- //web-development -->
     <!-- //web-development -->
 
-        <div class="web-dev" id="web-dev">
-            <h1>Web Development</h1>
-            <p>Marketing is all about delivering the information about what your business is all about and what it gives to the audience. The loop of information decides how well your business can perform. 
-                The right strategy for information flow is forecasting it creatively. Marketing collaterals can easily convert the potential customer into a buyer when created with the strategic approach.<br>
-                With the best marketing collateral design services you can make your brand exceptionally differentiating in the market sphere. Since it acquires the immense power to build the recall value, 
-                it is one of the finest strategies to be incorporated in your marketing strategy.</p>
-                <hr class="hr">
-            <img src="../img/banners/web-dev.svg" alt="">
+        <div class="services-offered" id="web-dev">
+            <div class="text" id="text">
+                <h1>Creative Websites</h1>
+                <p>Marketing is all about delivering the information about what your business is all about and what it gives to the audience. The loop of information decides how well your business can perform. 
+                    The right strategy for information flow is forecasting it creatively.
+                    <span class="read-more-text">Marketing collaterals can easily convert the potential customer into a buyer when created with the strategic approach.<br>
+                        With the best marketing collateral design services you can make your brand exceptionally differentiating in the market sphere. Since it acquires the immense power to build the recall value, 
+                        it is one of the finest strategies to be incorporated in your marketing strategy.
+                    </span>
+                </p>
+                <span class="read-more-btn">Read More...</span>
+            </div>
+            <div class="image">
+                <img class="img-fluid" src="../img/banners/web-dev.svg" alt="">
+            </div>
         </div>
-        <div id="slider-inner" class="owl-carousel">
+        <div id="slider-inner" class="owl-carousel owl-theme slider-inner">
             <div class="slide-img">
                 <i style="color: black;"class="fa-5x fab fa-node"></i>
             </div>
@@ -168,19 +240,15 @@
                 <i style="color: black;" class="fab fa-5x fa-php"></i>
             </div>
         </div>
-        <div class="tow-container" 
-            style="display: flex; flex-direction: column; justify-content: center; height: 80vh; text-align: center; 
-        margin-top: 80px;">
-            <div class="heading">
-                <h1 style="font-size: 50px; font-weight: 700;">WE CATER SUCCESS<br>
-                    WHAT DO YOU GET FROM US?</h1>
-            </div>
-            <div class="types-of-websites mt-5 pt-5">
-                <a href="/show" class="websites responsive-websites">
-                   <img src="../img/banners/responsive-web-square.png" alt="">
+        <div class="tow-container">
+            <h1>WE CATER SUCCESS<br>
+                WHAT DO YOU GET FROM US?</h1>
+            <div class="types-of-websites mt-5">
+                <a href="/show" class="column responsive-websites">
+                   <img class="img-fluid" src="../img/banners/responsive-web-square.png" alt="">
                 </a>
-                <a href="/show" class="websites custom-websites">
-                   <img src="../img/banners/sample_1.jpg" alt="">
+                <a href="/show" class="column websites custom-websites">
+                   <img class="img-fluid" src="../img/banners/sample_1.jpg" alt="">
                 </a>
             </div>
         </div>
@@ -189,82 +257,23 @@
         <!-- //graphic designing -->
         <!-- //graphic designing -->
 
-        <div class="graphic-design" id="graphic-design">
-            <h1>Graphic Design</h1>
-            <p>Marketing is all about delivering the information about what your business is all about and what it gives to the audience. The loop of information decides how well your business can perform. 
-                The right strategy for information flow is forecasting it creatively. Marketing collaterals can easily convert the potential customer into a buyer when created with the strategic approach.<br>
-                With the best marketing collateral design services you can make your brand exceptionally differentiating in the market sphere. Since it acquires the immense power to build the recall value, 
-                it is one of the finest strategies to be incorporated in your marketing strategy.</p>
-                <hr class="hr" style="color: #f5f5f5;">
-            <img src="../img/banners/graphic-design.svg" alt="">
-        </div>
-        <div id="graphic-design-slider" class="owl-carousel">
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/After-effects.png" alt="">
+        <div class="services-offered" id="graphic-design">
+            <div class="text" id="text">
+                <h1>Eye Catching Desings</h1>
+                <p>Marketing is all about delivering the information about what your business is all about and what it gives to the audience. The loop of information decides how well your business can perform. 
+                    The right strategy for information flow is forecasting it creatively.
+                    <span class="read-more-text">Marketing collaterals can easily convert the potential customer into a buyer when created with the strategic approach.<br>
+                        With the best marketing collateral design services you can make your brand exceptionally differentiating in the market sphere. Since it acquires the immense power to build the recall value, 
+                        it is one of the finest strategies to be incorporated in your marketing strategy.
+                    </span>
+                </p>
+                <span class="read-more-btn">Read More...</span>
             </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/zbrush.png" alt="">
-            </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/3ds-max.png" alt="">
-            </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/substance-painter.png" alt="">
-            </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/adobe.png" alt="">
-            </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/autodesk-maya.png" alt="">
-            </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/coral-draw.png" alt="">
-            </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/photoshop.png" alt="">
-            </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/illustrator.png" alt="">
-            </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/Davinchi-resolve.png" alt="">
-            </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/autodesk.png" alt="">
+            <div class="image">
+                <img class="img-fluid" src="../img/banners/graphic-design.svg" alt="">
             </div>
         </div>
-
-        <div class="tow-container" 
-        style="display: flex; flex-direction: column; justify-content: center; height: 80vh; text-align: center; 
-        margin-top: 80px;">
-            <div class="heading">
-                <h1 style="font-size: 50px; font-weight: 700;">WE CATER SUCCESS<br>
-                    WHAT DO YOU GET FROM US?</h1>
-            </div>
-            <div class="types-of-websites mt-5 pt-5">
-                <a href="/show" class="websites responsive-websites">
-                   <img src="../img/banners/responsive-web-square.png" alt="">
-                </a>
-                <a href="/show" class="websites custom-websites">
-                   <img src="../img/banners/sample_1.jpg" alt="">
-                </a>
-            </div>
-        </div>
-    
-    <!-- app development -->
-    <!-- app development -->
-    <!-- app development -->
-    
-        <div class="video-production" id="video-production">
-            <h1>video Production</h1>
-            <p>Marketing is all about delivering the information about what your business is all about and what it gives to the audience. The loop of information decides how well your business can perform. 
-                The right strategy for information flow is forecasting it creatively. Marketing collaterals can easily convert the potential customer into a buyer when created with the strategic approach.<br>
-                With the best marketing collateral design services you can make your brand exceptionally differentiating in the market sphere. Since it acquires the immense power to build the recall value, 
-                it is one of the finest strategies to be incorporated in your marketing strategy.</p>
-                <hr class="hr">
-                <img src="../img/banners/video-production.svg" alt="">
-        </div>
-        <div id="slider-inner" class="owl-carousel">
+        <div id="slider-inner" class="owl-carousel owl-theme slider-inner">
             <div class="slide-img">
                 <i style="color: black;"class="fa-5x fab fa-node"></i>
             </div>
@@ -296,103 +305,41 @@
                 <i style="color: black;" class="fab fa-5x fa-php"></i>
             </div>
         </div>
-        <div class="tow-container" 
-        style="display: flex; flex-direction: column; justify-content: center; height: 80vh; text-align: center; 
-        margin-top: 80px;">
-            <div class="heading">
-                <h1 style="font-size: 50px; font-weight: 700;">WE CATER SUCCESS<br>
-                    WHAT DO YOU GET FROM US?</h1>
-            </div>
-            <div class="types-of-websites mt-5 pt-5">
-                <a href="/show" class="websites responsive-websites">
-                   <img src="../img/banners/responsive-web-square.png" alt="">
+
+        <div class="tow-container">
+            <h1>WE CATER SUCCESS<br>
+                WHAT DO YOU GET FROM US?</h1>
+            <div class="types-of-websites mt-5">
+                <a href="/show" class="column responsive-websites">
+                   <img class="img-fluid" src="../img/banners/responsive-web-square.png" alt="">
                 </a>
-                <a href="/show" class="websites custom-websites">
-                   <img src="../img/banners/sample_1.jpg" alt="">
+                <a href="/show" class="column websites custom-websites">
+                   <img class="img-fluid" src="../img/banners/sample_1.jpg" alt="">
                 </a>
             </div>
         </div>
     
-    <!-- digital marketing / advertising -->
-    <!-- digital marketing / advertising -->
-    <!-- digital marketing / advertising -->
-
-        <div class="marketing-advertising" id="marketing-advertising">
-            <h1>Digital Marketing/Advertising</h1>
-            <p>Marketing is all about delivering the information about what your business is all about and what it gives to the audience. The loop of information decides how well your business can perform. 
-                The right strategy for information flow is forecasting it creatively. Marketing collaterals can easily convert the potential customer into a buyer when created with the strategic approach.<br>
-                With the best marketing collateral design services you can make your brand exceptionally differentiating in the market sphere. Since it acquires the immense power to build the recall value, 
-                it is one of the finest strategies to be incorporated in your marketing strategy.</p>
-                <hr class="hr" style="color: #f5f5f5;">
-            <img class="pb-5" src="../img/banners/Digital-Marketing-Advertising.svg" alt="">
-        </div>
-        <div id="graphic-design-slider" class="owl-carousel">
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/After-effects.png" alt="">
+    <!-- app development -->
+    <!-- app development -->
+    <!-- app development -->
+    
+        <div class="services-offered" id="video-production">
+            <div class="text" id="text">
+                <h1>Impactfull Videos</h1>
+                <p>Marketing is all about delivering the information about what your business is all about and what it gives to the audience. The loop of information decides how well your business can perform. 
+                    The right strategy for information flow is forecasting it creatively.
+                    <span class="read-more-text">Marketing collaterals can easily convert the potential customer into a buyer when created with the strategic approach.<br>
+                        With the best marketing collateral design services you can make your brand exceptionally differentiating in the market sphere. Since it acquires the immense power to build the recall value, 
+                        it is one of the finest strategies to be incorporated in your marketing strategy.
+                    </span>
+                </p>
+                <span class="read-more-btn">Read More...</span>
             </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/zbrush.png" alt="">
-            </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/3ds-max.png" alt="">
-            </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/substance-painter.png" alt="">
-            </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/adobe.png" alt="">
-            </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/autodesk-maya.png" alt="">
-            </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/coral-draw.png" alt="">
-            </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/photoshop.png" alt="">
-            </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/illustrator.png" alt="">
-            </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/Davinchi-resolve.png" alt="">
-            </div>
-            <div class="slide-img">
-                <img src="../img/Graphic-Designing/autodesk.png" alt="">
+            <div class="image">
+                <img class="img-fluid" src="../img/banners/video-production.svg" alt="">
             </div>
         </div>
-
-        <div class="tow-container" 
-        style="display: flex; flex-direction: column; justify-content: center; height: 80vh; text-align: center; 
-        margin-top: 80px;">
-            <div class="heading">
-                <h1 style="font-size: 50px; font-weight: 700;">WE CATER SUCCESS<br>
-                    WHAT DO YOU GET FROM US?</h1>
-            </div>
-            <div class="types-of-websites mt-5 pt-5">
-                <a href="/show" class="websites responsive-websites">
-                   <img src="../img/banners/responsive-web-square.png" alt="">
-                </a>
-                <a href="/show" class="websites custom-websites">
-                   <img src="../img/banners/sample_1.jpg" alt="">
-                </a>
-            </div>
-        </div>
-
-    <!-- social media management -->
-    <!-- social media management -->
-    <!-- social media management -->
-
-        <div class="social-media-marketing" id="social-media-marketing">
-            <h1>Social media management</h1>
-            <p>Marketing is all about delivering the information about what your business is all about and what it gives to the audience. The loop of information decides how well your business can perform. 
-                The right strategy for information flow is forecasting it creatively. Marketing collaterals can easily convert the potential customer into a buyer when created with the strategic approach.<br>
-                With the best marketing collateral design services you can make your brand exceptionally differentiating in the market sphere. Since it acquires the immense power to build the recall value, 
-                it is one of the finest strategies to be incorporated in your marketing strategy.</p>
-                <hr class="hr">
-                <img src="../img/banners/social-media-management.svg" alt="">
-        </div>
-        <div id="slider-inner" class="owl-carousel">
+        <div id="slider-inner" class="owl-carousel owl-theme slider-inner">
             <div class="slide-img">
                 <i style="color: black;"class="fa-5x fab fa-node"></i>
             </div>
@@ -424,19 +371,146 @@
                 <i style="color: black;" class="fab fa-5x fa-php"></i>
             </div>
         </div>
-        <div class="tow-container" 
-        style="display: flex; flex-direction: column; justify-content: center; height: 80vh; text-align: center; 
-        margin-top: 80px;">
-            <div class="heading">
-                <h1 style="font-size: 50px; font-weight: 700;">WE CATER SUCCESS<br>
-                    WHAT DO YOU GET FROM US?</h1>
-            </div>
-            <div class="types-of-websites mt-5 pt-5">
-                <a href="/show" class="websites responsive-websites">
-                   <img src="../img/banners/responsive-web-square.png" alt="">
+        <div class="tow-container">
+            <h1>WE CATER SUCCESS<br>
+                WHAT DO YOU GET FROM US?</h1>
+            <div class="types-of-websites mt-5">
+                <a href="/show" class="column responsive-websites">
+                   <img class="img-fluid" src="../img/banners/responsive-web-square.png" alt="">
                 </a>
-                <a href="/show" class="websites custom-websites">
-                   <img src="../img/banners/sample_1.jpg" alt="">
+                <a href="/show" class="column websites custom-websites">
+                   <img class="img-fluid" src="../img/banners/sample_1.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    
+    <!-- digital marketing / advertising -->
+    <!-- digital marketing / advertising -->
+    <!-- digital marketing / advertising -->
+
+        <div class="services-offered" id="marketing-advertising">
+            <div class="text" id="text">
+                <h1>Precision Marketing</h1>
+                <p>Marketing is all about delivering the information about what your business is all about and what it gives to the audience. The loop of information decides how well your business can perform. 
+                    The right strategy for information flow is forecasting it creatively.
+                    <span class="read-more-text">Marketing collaterals can easily convert the potential customer into a buyer when created with the strategic approach.<br>
+                        With the best marketing collateral design services you can make your brand exceptionally differentiating in the market sphere. Since it acquires the immense power to build the recall value, 
+                        it is one of the finest strategies to be incorporated in your marketing strategy.
+                    </span>
+                </p>
+                <span class="read-more-btn">Read More...</span>
+            </div>
+            <div class="image">
+                <img class="img-fluid" src="../img/banners/Digital-Marketing-Advertising.svg" alt="">
+            </div>
+        </div>
+        <div id="slider-inner" class="owl-carousel owl-theme slider-inner">
+            <div class="slide-img">
+                <i style="color: black;"class="fa-5x fab fa-node"></i>
+            </div>
+            <div class="slide-img">
+                <i style="color: red;"class="fa-5x fab fa-angular"></i>
+            </div>
+            <div class="slide-img">
+                <i style="color: black ;" class="fa-5x fab fa-wordpress"></i>
+            </div>
+            <div class="slide-img">
+                <i style="color: #057af0;"class="fa-5x fab fa-css3-alt"></i>
+            </div>
+            <div class="slide-img">
+                <i style="color:black;"class="fab fa-5x fa-js-square"></i>
+            </div>
+            <div class="slide-img">
+                <i style="color:#ff5400 ;" class="fab fa-5x fa-html5"></i>
+            </div>
+            <div class="slide-img">
+                <i style="color: #90e0ef;" class="fab fa-5x fa-react"></i>
+            </div>
+            <div class="slide-img">
+                <i style="color: #ba324f;" class="fab fa-5x fa-npm"></i>
+            </div>
+            <div class="slide-img">
+                <i style="color: black;" class="fab fa-5x fa-python"></i>
+            </div>
+            <div class="slide-img">
+                <i style="color: black;" class="fab fa-5x fa-php"></i>
+            </div>
+        </div>
+
+        <div class="tow-container">
+            <h1>WE CATER SUCCESS<br>
+                WHAT DO YOU GET FROM US?</h1>
+            <div class="types-of-websites mt-5">
+                <a href="/show" class="column responsive-websites">
+                   <img class="img-fluid" src="../img/banners/responsive-web-square.png" alt="">
+                </a>
+                <a href="/show" class="column websites custom-websites">
+                   <img class="img-fluid" src="../img/banners/sample_1.jpg" alt="">
+                </a>
+            </div>
+        </div>
+
+    <!-- social media management -->
+    <!-- social media management -->
+    <!-- social media management -->
+
+        <div class="services-offered" id="social-media-marketing">
+            <div class="text" id="text">
+                <h1>Impactful Social Media Campains</h1>
+                <p>Marketing is all about delivering the information about what your business is all about and what it gives to the audience. The loop of information decides how well your business can perform. 
+                    The right strategy for information flow is forecasting it creatively.
+                    <span class="read-more-text">Marketing collaterals can easily convert the potential customer into a buyer when created with the strategic approach.<br>
+                        With the best marketing collateral design services you can make your brand exceptionally differentiating in the market sphere. Since it acquires the immense power to build the recall value, 
+                        it is one of the finest strategies to be incorporated in your marketing strategy.
+                    </span>
+                </p>
+                <span class="read-more-btn">Read More...</span>
+            </div>
+            <div class="image">
+                <img class="img-fluid" src="../img/banners/social-media-management.svg" alt="">
+            </div>
+        </div>
+        <div id="slider-inner" class="owl-carousel owl-theme slider-inner">
+            <div class="slide-img">
+                <i style="color: black;"class="fa-5x fab fa-node"></i>
+            </div>
+            <div class="slide-img">
+                <i style="color: red;"class="fa-5x fab fa-angular"></i>
+            </div>
+            <div class="slide-img">
+                <i style="color: black ;" class="fa-5x fab fa-wordpress"></i>
+            </div>
+            <div class="slide-img">
+                <i style="color: #057af0;"class="fa-5x fab fa-css3-alt"></i>
+            </div>
+            <div class="slide-img">
+                <i style="color:black;"class="fab fa-5x fa-js-square"></i>
+            </div>
+            <div class="slide-img">
+                <i style="color:#ff5400 ;" class="fab fa-5x fa-html5"></i>
+            </div>
+            <div class="slide-img">
+                <i style="color: #90e0ef;" class="fab fa-5x fa-react"></i>
+            </div>
+            <div class="slide-img">
+                <i style="color: #ba324f;" class="fab fa-5x fa-npm"></i>
+            </div>
+            <div class="slide-img">
+                <i style="color: black;" class="fab fa-5x fa-python"></i>
+            </div>
+            <div class="slide-img">
+                <i style="color: black;" class="fab fa-5x fa-php"></i>
+            </div>
+        </div>
+        <div class="tow-container">
+            <h1>WE CATER SUCCESS<br>
+                WHAT DO YOU GET FROM US?</h1>
+            <div class="types-of-websites mt-5">
+                <a href="/show" class="column responsive-websites">
+                   <img class="img-fluid" src="../img/banners/responsive-web-square.png" alt="">
+                </a>
+                <a href="/show" class="column websites custom-websites">
+                   <img class="img-fluid" src="../img/banners/sample_1.jpg" alt="">
                 </a>
             </div>
         </div>
@@ -444,16 +518,23 @@
     <!-- //vedio production -->
     <!-- //vedio production -->
     <!-- //vedio production -->
-    <div class="app-development" id="app-development">
-        <h1>App Development</h1>
-        <p>Marketing is all about delivering the information about what your business is all about and what it gives to the audience. The loop of information decides how well your business can perform. 
-            The right strategy for information flow is forecasting it creatively. Marketing collaterals can easily convert the potential customer into a buyer when created with the strategic approach.<br>
-            With the best marketing collateral design services you can make your brand exceptionally differentiating in the market sphere. Since it acquires the immense power to build the recall value, 
-            it is one of the finest strategies to be incorporated in your marketing strategy.</p>
-            <hr class="hr">
-            <img src="../img/banners/app-development.svg" alt="">
+    <div class="services-offered" id="app-development">
+        <div class="text" id="text">
+            <h1>Handcrafted App Design/Development</h1>
+            <p>Marketing is all about delivering the information about what your business is all about and what it gives to the audience. The loop of information decides how well your business can perform. 
+                The right strategy for information flow is forecasting it creatively.
+                <span class="read-more-text">Marketing collaterals can easily convert the potential customer into a buyer when created with the strategic approach.<br>
+                    With the best marketing collateral design services you can make your brand exceptionally differentiating in the market sphere. Since it acquires the immense power to build the recall value, 
+                    it is one of the finest strategies to be incorporated in your marketing strategy.
+                </span>
+            </p>
+            <span class="read-more-btn">Read More...</span>
+        </div>
+        <div class="image">
+            <img class="img-fluid" src="../img/banners/app-development.svg" alt="">
+        </div>
     </div>
-    <div id="slider-inner" class="owl-carousel">
+    <div id="slider-inner" class="owl-carousel owl-theme slider-inner">
         <div class="slide-img">
             <i style="color: black;"class="fa-5x fab fa-node"></i>
         </div>
@@ -485,19 +566,15 @@
             <i style="color: black;" class="fab fa-5x fa-php"></i>
         </div>
     </div>
-    <div class="tow-container" 
-    style="display: flex; flex-direction: column; justify-content: center; height: 80vh; text-align: center; 
-    margin-top: 80px;">
-        <div class="heading">
-            <h1 style="font-size: 50px; font-weight: 700;">WE CATER SUCCESS<br>
-                WHAT DO YOU GET FROM US?</h1>
-        </div>
-        <div class="types-of-websites mt-5 pt-5">
-            <a href="/show" class="websites responsive-websites">
-               <img src="../img/banners/responsive-web-square.png" alt="">
+    <div class="tow-container">
+        <h1>WE CATER SUCCESS<br>
+            WHAT DO YOU GET FROM US?</h1>
+        <div class="types-of-websites mt-5">
+            <a href="/show" class="column responsive-websites">
+               <img class="img-fluid" src="../img/banners/responsive-web-square.png" alt="">
             </a>
-            <a href="/show" class="websites custom-websites">
-               <img src="../img/banners/sample_1.jpg" alt="">
+            <a href="/show" class="column websites custom-websites">
+               <img class="img-fluid" src="../img/banners/sample_1.jpg" alt="">
             </a>
         </div>
     </div>
@@ -505,7 +582,6 @@
     </div> 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type="text/JavaScript" src="./js/work.js"></script>
 
 
     <%- include('./partials/footer.ejs') %>

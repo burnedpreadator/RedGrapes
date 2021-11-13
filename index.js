@@ -4,7 +4,6 @@ const express = require('express'),
       session = require('express-session'),
       flash = require('connect-flash'),
       ejsMate = require('ejs-mate'),
-      // compression = require('compression'),
       showRoutes = require('./routes/show'),
       mailRoutes = require('./routes/mailRoute'),
       loginRoutes = require('./routes/loginRoute'),
@@ -12,21 +11,12 @@ const express = require('express'),
       logoutRoutes = require('./routes/logoutRoute'),
       sessionConfig = require('./models/sessionConfig'),
       bgvideoRoute = require('./routes/videos/bgVideo'),
-      videoRoute = require('./routes/videos/video');
+      videoRoute = require('./routes/videos/video'),
+      Work = require('./models/show');
 
 require("./db/conn");
 
 app.use('ejs', ejsMate)
-// app.use(compression({
-//   level: 6,
-//   threshold: 10*1000,
-//   filter: (req, res) =>{
-//     if(req.header['x-no-xompression']) {
-//       return false
-//     }
-//     return compression.filter(req, res)
-//   },
-// }))
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use(express.json({limit: '50mb'}));
 app.set("view engine", "ejs");
@@ -41,7 +31,7 @@ app.use((req,res, next) => {
 })
 
 //routes
-app.use('/', mailRoutes);
+app.use('/Contact', mailRoutes);
 app.use('/show', showRoutes);
 app.use('/admin', adminRoutes);
 app.use('/login', loginRoutes);
@@ -50,6 +40,16 @@ app.use('/video', videoRoute);
 app.use('/bgvideo', bgvideoRoute);
 
 //other routes
+
+app.get('/', async(req, res, next) => {
+  Work.find({}, function(err, allWork) {
+      if(err){
+          console.log(err);
+      }else{
+          res.render('Home', {work: allWork});
+      }
+  });
+});
 
 app.get("/about", (req, res)=> {
   res.render('about');

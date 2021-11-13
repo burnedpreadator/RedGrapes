@@ -1,11 +1,11 @@
 <%- include('./partials/header.ejs') %>
 <%- include('./partials/flash.ejs') %>
 
-        <div class="grids no-gutter">
+        <div class="card-container">
             <% if( Array.isArray(work) ) { %>
                 <%work.forEach( function( work ){ %>
-                    <div class="grid">
-                        <img class="img-fluid" src="<%= work.workImage %>" alt="">
+                    <div class="box">
+                        <img src="<%= work.workImage %>" alt="">
                     </div>
             <% })} else { %>
                     <% console.log('error') %>

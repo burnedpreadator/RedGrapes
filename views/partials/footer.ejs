@@ -28,21 +28,64 @@
     src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
         $(document).ready(function(){
-            $("#slider-inner").owlCarousel({
+            $(".services-slider").owlCarousel({
+                items:1,
+                loop:true,
+                margin:10,
+                ltr: true,
+                autoplay:true,
+                autoplayTimeout:2000,
+                autoplayHoverPause:true,
+            });
+        })
+        $(document).ready(function(){
+            $(".service-pngs-carousel-1").owlCarousel({
+                items:1,
+                loop:true,
+                margin:10,
+                ltr: true,
+                autoplay:true,
+                autoplayTimeout:2500,
+                autoplayHoverPause:true
+            });
+        })
+        $(document).ready(function(){
+            $(".service-pngs-carousel-2").owlCarousel({
+                items:1,
+                loop:true,
+                margin:10,
+                ltr:true,
+                autoplay:true,
+                autoplayTimeout:2500,
+                autoplayHoverPause:true
+            });
+        })
+        $(document).ready(function(){
+            $(".slider-inner").owlCarousel({
                 items:6,
-                infinite: true,
-                itemsDesktop:[1000,6],
-                itemsDesktopSmall:[979,4],
-                itemsTablet:[768,3],
-                itemsMobile:[650,1],
-                pagination:false,
-                autoPlay: 2500
+                responsive: {
+                    0:{
+                        items:2,
+                    },
+                    600:{
+                        items:4,
+                    },
+                    1000:{
+                        items:6,
+                        dots: false,
+                    }
+                },
+                loop:true,
+                margin:10,
+                autoplay:true,
+                autoplayTimeout: 1000,
+                autoplaySpeed: 2500,
             });
         });
-
         $(document).ready(function(){
             $("#graphic-design-slider").owlCarousel({
                 items:6,
@@ -83,6 +126,7 @@
 
     </script>
     
+    <script type='text/JavaScript' src='./js/styles.js'></script>
     <script type='text/JavaScript' src='./js/Home.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </script>
