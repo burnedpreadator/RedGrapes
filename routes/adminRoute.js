@@ -3,7 +3,7 @@ const express = require("express"),
     session = require('express-session'),
     flash = require('connect-flash'),
     passport = require('passport'),
-    sessionConfig = require('../../models/sessionConfig');
+    sessionConfig = require('../models/sessionConfig');
   
 router.use(session(sessionConfig));
 router.use(flash());
