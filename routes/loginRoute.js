@@ -5,8 +5,8 @@ const express = require("express"),
     passport = require('passport'),
     localStrategy = require('passport-local').Strategy,
     bcrypt = require('bcrypt'),
-    User = require('../models/user'),
-    sessionConfig = require('../models/sessionConfig');
+    User = require('../../models/user'),
+    sessionConfig = require('../../models/sessionConfig');
   
 router.use(session(sessionConfig));
 router.use(flash());

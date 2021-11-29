@@ -31,13 +31,13 @@ app.use((req,res, next) => {
 })
 
 //routes
-app.use('/Contact', mailRoutes);
-app.use('/show', showRoutes);
-app.use('/admin', adminRoutes);
-app.use('/login', loginRoutes);
-app.use('/logout', logoutRoutes);
-app.use('/video', videoRoute);
-app.use('/bgvideo', bgvideoRoute);
+app.use('/api/Contact', mailRoutes);
+app.use('/api/show', showRoutes);
+app.use('/api/admin', adminRoutes);
+app.use('/api/login', loginRoutes);
+app.use('/api/logout', logoutRoutes);
+app.use('/api/video', videoRoute);
+app.use('/api/bgvideo', bgvideoRoute);
 
 //other routes
 
